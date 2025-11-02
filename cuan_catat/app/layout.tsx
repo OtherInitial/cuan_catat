@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: "/ikon_apk.ico",
+    icon: "/favicon.ico",
   },
   applicationName: "Cuan Catat",
   openGraph: {
