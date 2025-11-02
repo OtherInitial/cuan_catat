@@ -18,15 +18,12 @@ export function PWAStatus() {
           errors: [] as string[],
         }
 
-        // Check manifest
         const manifestLink = document.querySelector('link[rel="manifest"]')
         checks.manifestFound = !!manifestLink
 
         if (!checks.manifestFound) {
           checks.errors.push("❌ Manifest link tidak ditemukan di HTML")
         }
-
-        // Fetch manifest
         try {
           const response = await fetch("/manifest.json")
           if (response.ok) {
@@ -40,7 +37,6 @@ export function PWAStatus() {
           checks.errors.push(`❌ Manifest error: ${String(e)}`)
         }
 
-        // Check service worker
         if ("serviceWorker" in navigator) {
           try {
             const registration = await navigator.serviceWorker.ready
@@ -53,12 +49,10 @@ export function PWAStatus() {
           checks.errors.push("❌ Service Worker tidak didukung browser ini")
         }
 
-        // Check HTTPS
         if (!checks.httpsEnabled) {
           checks.errors.push("❌ Aplikasi tidak menggunakan HTTPS (Required untuk PWA)")
         }
 
-        // Check icons
         if (checks.manifestContent?.icons) {
           for (const icon of checks.manifestContent.icons) {
             try {
