@@ -94,6 +94,15 @@ export function Navbar() {
                                     Profil
                                 </Link>
                             </SheetClose>
+
+                            <SheetClose asChild>
+                                <Link
+                                    href="/bantuan"
+                                    className="text-lg font-medium p-3 rounded-md hover:bg-gray-100 transition-colors"
+                                >
+                                    Bantuan
+                                </Link>
+                            </SheetClose>
                         </nav>
 
                         <SheetFooter>

@@ -26,41 +26,10 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
 })
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Cuan Catat",
   description: "Platform Pencatat Keuangan untuk UMKM Kelurahan Pongangan",
-  manifest: "/manifest.json",
-  keywords: ["finance", "cost", "umkm"],
-  themeColor: [
-    {
-      media: "(prefers-color-scheme: dark)",
-      color: "#fff",
-    },
-  ],
-  authors: [
-    {
-      name: "blaxx",
-      url: "https://hadideveloper.vercel.app",
-    },
-  ],
-  viewport: "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover",
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "default",
-    title: "Cuan Catat",
-  },
-  formatDetection: {
-    telephone: false,
-  },
-  icons: {
-    icon: "/favicon.ico",
-  },
-  applicationName: "Cuan Catat",
-  openGraph: {
-    title: "Cuan Catat",
-    description: "Platform Pencatat Keuangan untuk UMKM",
-    type: "website",
-  },
+  manifest: "/manifest.webmanifest",
 }
 
 export default function RootLayout({
